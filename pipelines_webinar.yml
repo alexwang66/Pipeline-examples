@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: github_wq
-      path: alexwang666/Pipeline-examples
+      path: alexwang66/Pipeline-examples
       branches:
         include: master
   - name: WQDockerAppImage
