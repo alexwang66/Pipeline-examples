@@ -1,5 +1,5 @@
 resources:
-  - name: XinGitRepo
+  - name: WQGitRepo
     type: GitRepo
     configuration:
       gitProvider: github_xin
@@ -23,7 +23,7 @@ resources:
 
 
 pipelines:
-  - name: swampup_docker_app_pipeline
+  - name: wq_docker_app_pipeline
     configuration:
       environmentVariables:
         readOnly:
@@ -97,7 +97,7 @@ pipelines:
             - name: XinGitRepo
               trigger: false
           outputResources:
-            - name: DockerAppImage
+            - name: WQDockerAppImage
           inputSteps:
             - name: bld_backend
             - name: publish_frontend #bld_frontend
@@ -121,5 +121,5 @@ pipelines:
           inputSteps:
             - name: bld_docker_app
           outputResources:
-            - name: XinBuildInfo
+            - name: WQBuildInfo
 
